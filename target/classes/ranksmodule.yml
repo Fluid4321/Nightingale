@@ -1,0 +1,118 @@
+# To configure how your ranks system runs you can use the following options.
+Settings:
+  consoleOnly: Owner, Manager # Only allows this rank to be granted through the console.
+
+#The permission %prefix% is configurable in the config.yml
+Permissions:
+  rank_Create: ‘%Prefix%.ranks.create’
+  rank_Rename: ‘%Prefix%.ranks.rename’
+  rank_Prefix: ‘%Prefix%.ranks.prefix’
+  rank_Inherit: ‘%Prefix%.ranks.inherit’
+  rank_Uninherit: ‘%Prefix%.ranks.uninherit’
+  rank_Weight: ‘%Prefix%.ranks.weight’
+  rank_Setrank: ‘%Prefix%.ranks.setrank’
+  rank_Remrank: ‘%Prefix%.ranks.remrank’
+  rank_History: ‘%Prefix%.ranks.history’
+  rank_List: ‘%Prefix%.ranks.list’
+  rank_Addperm: ‘%Prefix%.ranks.addperm’
+  rank_Remperm: ‘%Prefix%.ranks.remperm’
+  rank_Info: ‘%Prefix%.ranks.info’
+
+# Messages for each command can be configured individually.
+Ranks_Help:
+  - ‘&c&lRanks Help Menu’
+  - ‘&7&m__________________________’
+  - ‘&7’
+  - ‘&c/ranks create <name>.’
+  - ‘&c/ranks rename <rank> <newName>.’
+  - ‘&c/ranks prefix <rank> <prefix>.’
+  - ‘&c/ranks inherit <rank(HIGHER)> <rank(LOWER)>.’
+  - ‘&c/ranks un-inherit <rank(HIGHER)> <rank(LOWER)>.’
+  - ‘&c/ranks weight <rank> <weight>.’
+  - ‘&c/ranks setrank <player> <rank> <reason> <time>.’
+  - ‘&c/ranks remrank <username> <rank> <reason>.’
+  - ‘&c/ranks history <username>.’
+  - ‘&c/ranks list.’
+  - ‘&c/ranks addperm <rank> <permission>.’
+  - ‘&c/ranks remperm <rank> <permission>.’
+  - ‘&c/ranks info <rank>.’
+  - ‘&c/addperm <username> <permission>.’
+  - ‘&c/remperm <username> <permission>.’
+  - ‘&c/checkperms <username>’
+  - ‘&7’
+  - ‘&7&m__________________________’
+Ranks_Create:
+  rank_Create_Usage: ‘&7Incorrect usage please use &c/ranks create <name>.’
+  rank_Create_Successful: ‘&7%rankName% has been &a successfully &7 created!’
+  rank_Create_Already_Exists: ‘&7%rankName% already exists. Command &cfailed&7.’
+Ranks_Rename:
+  rank_Rename_Usage: ‘&7 Incorrect usage please use &c/ranks rename <rank> <newName>.’
+  rank_Rename_Successful: ‘&7%rankName% has been rename to %newRankName%’
+  rank_Rename_Already_Exists: ‘&7%rankName% cannot be changed to %newRankName% as it already exists. Command &cfailed&7.’
+  rank_Rename_Rank_Exist: ‘&7%rankName% doesn’t exist. Command &cfailed&7. ’
+Ranks_Prefix:
+  rank_Prefix_Usage: ‘&7 Incorrect usage please use &c/ranks prefix <rank> <prefix>.’
+  rank_Prefix_Change_Successful: ‘&7Updated %rankName%’s prefix from %oldPrefix% to %newPrefix%!’
+  rank_Prefix_Rank_Exist: ‘&7%rankName% doesn’t exist. Command &cfailed&7. ’
+Ranks_Inherit:
+  rank_Inherit_Usage: ‘&7Incorrect usage please use &c/ranks inherit <rank(HIGHER)> <rank(LOWER)>.’
+  rank_Inherit_Successful: ‘&aSuccessfully &7inherited %rankLOWER% permissions and applied them to %rankHIGHER%!’
+  rank_Inherit_Rank_Exist: ‘&7%rankName% doesn’t exist. Command &cfailed&7. ’
+Ranks_Un-Inherit:
+  rank_Un-inherit_Usage: ‘&7 Incorrect usage please use &c/ranks un-inherit <rank(HIGHER)> <rank(LOWER)>.’
+  rank_Un-Inherit_Successful: ‘&aSuccessfully &7un-inherited %rankLOWER% permissions and un-applied them to %rankHIGHER%!’
+  rank_Un-Inherit_Rank_Exist: ‘&7%rankName% doesn’t exist. Command &cfailed&7. ’
+Ranks_Weight_Usage:
+  rank_Weight_Usage: ‘&7 Incorrect usage please use &c/ranks weight <rank> <weight>.’
+  rank_Weight_Success: ‘&7%rankName%’s weight has been &asuccessfully change to %weight%’
+  rank_Weight_Rank_Exist: ‘&7%rankName% doesn’t exist. Command &cfailed&7. ’
+Ranks_SetRanks:
+  rank_SetRank_Usage: ‘&7 Incorrect usage please use &c/ranks setrank <player> <rank> <reason> <time>.’
+  rank_SetRank_InvalidPlayer: ‘&7Cannot assign rank to %player% as they haven’t joined the server!’
+  rank_SetRank_Timestamp_Invalid: ‘&7 Incorrect time specified &c/ranks setrank <player> <rank> <reason> <time (1y, 1mm ,1d, 1h, 1m, 1s>.’
+  rank_SetRank_Rank_Exist: ‘&7This rank already exists please create a new name or delete the old rank.’
+  rank_SetRank_Success: ‘&aSuccessfully &7create the rank %rankName%!’
+Ranks_RemRank:
+  rank_RemRank_Usage: ‘&7 Incorrect usage please use &c/ranks remrank <username> <rank> <reason>.’
+  rank_RemRank_Success: ‘&aSuccessfully &7deleted the rank %rankName%!’
+  rank_RemRank_Rank_Exist: ‘‘&7%rankName% doesn’t exist. Command &cfailed&7.’
+Ranks_History:
+  rank_History_Usage: ‘&7 Incorrect usage please use &c/ranks history <username>.’
+  rank_History_None: ‘&7%player% has no history available to view.’
+Ranks_List:
+  rank_List_Usage: ‘&7 Incorrect usage please use &c/ranks list.’
+  rank_List_None: ‘&7There are no ranks currently created.’
+  rank_List_Ranks:
+    - ‘&c&lRanks List’
+    - ‘&7&m__________________________’
+    - ‘&7’
+    - ‘%lineByLineRanks%’ # You can use %RanksList% to list all of the available ranks on one line
+    - ‘&7’
+    - ‘&7&m__________________________’
+Ranks_AddPerm:
+  rank_AddPerm_Usage: ‘&7 Incorrect usage please use &c/ranks addperm <rank> <permission>.’
+  rank_AddPerm_Success: ‘&aSuccessfully &7added permission %permission% to %rankName%!’
+  rank_AddPerm_Rank_Exist: ‘&7%rankName% doesn’t exist. Command &cfailed&7. ’
+  rank_AddPerm_Already_Exists: ‘&7%rankName% already has permission %permission%. Command &cfailed&7.’
+Ranks_RemPerm:
+  rank_RemPerm_Usage: ‘&7 Incorrect usage please use &c/ranks remperm <rank> <permission>.’
+  rank_RemPerm_Success: ‘&7Successfully removed permission &a%permission% &7from %rankName%!’
+  rank_RemPerm_Rank_Exist: ‘&7%rankName% doesn’t exist. Command &cfailed&7. ’
+  rank_RemPerm_Perm_Exist: ‘&7%rankName% doesn’t have the permission &c%permission%&7. Command &cfailed&7. ’
+Ranks_Info:
+  rank_Info_Usage: ‘&7 Incorrect usage please use &c/ranks info <rank>.’
+  rank_Info_Rank_Exist: ‘&7%rankName% doesn’t exist. Command &cfailed&7. ’
+  rank_Info_Message_Format: '&6===== Rank Information =====\n&eName: &a%rankName%\n&ePrefix: &a%rankPrefix%\n&eInherits from: &a%rankInherits%\n&eWeight: &a%rankWeight%\n&ePermissions: &a%rankPermissions%\n'
+AddPerm:
+  rank_AddPerm_Usage: ‘&7Incorrect usage please use &c/addperm <username> <permission>.’
+  rank_AddPerm_Success: ‘&7Successfully added permission &a%permission% &7to %rankName%!’
+  rank_AddPerm_Rank_Exist: ‘&7%rankName% doesn’t exist. Command &cfailed&7. ’
+  rank_AddPerm_Perm_Exist: ‘&7%rankName% already has the permission &c%permission%&7. Command &cfailed&7.’
+RemPerm:
+  rank_RemPerm_Usage: ‘&7 Incorrect usage please use &c/remperm <username> <permission>.’
+  rank_RemPerm_Success: ‘&7Successfully removed permission &a%permission% &7from %rankName%!’
+  rank_RemPerm_Rank_Exist: ‘&7%rankName% doesn’t exist. Command &cfailed&7. ’
+  rank_RemPerm_Perm_Exist: ‘&7%rankName% doesn’t have the permission &c%permission%&7. Command &cfailed&7.’
+Ranks_CheckPerm:
+  rank_CheckPerm_Usage: ‘&7 Incorrect usage please use &c/ranks checkperms <rank>.’
+  rank_CheckPerm_Rank_Exist: ‘&7%rankName% doesn’t exist. Command &cfailed&7. ’

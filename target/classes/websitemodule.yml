@@ -1,0 +1,5 @@
+# The plugin side of the website is very basic however simple things can be configured.
+hashPasswords: True
+
+# The option below enables the use of in-game players (with permission) to reset staff panel passwords
+consoleResetsOnly: True # Recommend to keep this on true

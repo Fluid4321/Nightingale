@@ -1,0 +1,70 @@
+# To configure how your ranks system runs you can use the following options.
+Settings:
+  consoleOnly: Blacklist
+  appealLink: https://mellow.management
+
+#The permission %prefix% is configurable in the config.yml
+Permissions:
+  punish_Ban: ‘%Prefix%.punish.ban’
+  punish_Mute: ‘%Prefix%.punish.mute’
+  punish_BanIP: ‘%Prefix%.punish.banip’
+  punish_Blacklist: ‘%Prefix%.punish.blacklist’
+  punish_History: ‘%Prefix%.punish.history’
+  punish_PruneHistory: ‘%Prefix%.punish.prunehistory’
+  punish_StaffHistory: ‘%Prefix%.punish.staffhistory’
+  punish_Alts: ‘%Prefix%.punish.alts’
+  punish_AltsReport: ‘%Prefix%.punish.altsreport’
+
+# Messages for each command can be configured individually.
+Punishments_Help:
+  - '&c&lPunishments Help Menu'
+  - '&7&m__________________________'
+  - '&7'
+  - '&c/ban <flags(-p, -s)> <player> <time> <reason>'
+  - '&c/mute <flags(-p, -s)> <player> <time> <reason>'
+  - '&c/ban-ip <flags(-p, -s)> <player> <time> <reason>'
+  - '&c/blacklist <flags(-p, -s)> <player> <time> <reason>'
+  - '&c/history <player>'
+  - '&c/prunehistory <player> <duration>'
+  - '&c/staffhistory <player>'
+  - '&c/alts <player>'
+  - '&c/altsreport <player>'
+  - '&7'
+  - '&7&m__________________________'
+
+Ban:
+  usage: '&7 Incorrect usage please use: &c/ban <flags(-p, -s)> <player> <time> <reason>'
+  success: '&aSuccessfully banned %player% for %time% with reason: &f%reason%&a!'
+  player_not_found: '&7Could not find player %player%.'
+already_banned: '&7Player %player% is already banned.'
+Mute:
+  usage: '&7 Incorrect usage please use: &c/mute <flags(-p, -s)> <player> <time> <reason>'
+  success: '&aSuccessfully muted %player% for %time% with reason: &f%reason%&a!'
+  player_not_found: '&7Could not find player %player%.'
+  already_muted: '&7Player %player% is already muted.'
+banip:
+  usage: '&7 Incorrect usage please use: &c/ban-ip <flags(-p, -s)> <player> <time> <reason>'
+  success: '&aSuccessfully banned IP address %ip% for %time% with reason: &f%reason%&a!'
+  player_not_found: '&7Could not find player %player%.'
+  already_banned: '&7IP address %ip% is already banned.'
+Blacklist:
+  usage: '&7 Incorrect usage please use: &c/blacklist <flags(-p, -s)> <player> <time> <reason>'
+  success: '&aSuccessfully blacklisted %player% for %time% with reason: &f%reason%&a!'
+  player_not_found: '&7Could not find player %player%.'
+  already_blacklisted: '&7Player %player% is already blacklisted.'
+History:
+  usage: '&7 Incorrect usage please use: &c/history <player>'
+  none: '&7No punishment history found for player %player%.'
+Prunehistory:
+  usage: '&7 Incorrect usage please use: &c/prunehistory <player> <duration>'
+  success: '&aSuccessfully pruned punishment history for player %player% older than %duration%!'
+  invalid_duration: '&7Invalid duration specified. Please use a valid duration format (e.g. 1y, 1m, 1d, 1h, 1min,   1s).'
+Staffhistory:
+  usage: '&7 Incorrect usage please use: &c/staffhistory <player>'
+  none: '&7No staff punishment history found for player %player%.'
+Alts:
+  usage: '&7 Incorrect usage please use: &c/alts <player>'
+  none: '&7No alternate accounts found for player %player%.'
+Altsreport:
+  usage: '&7 Incorrect usage please use: &c/altsreport <player>'
+  none: '&7No alternate accounts found for player %player%.'

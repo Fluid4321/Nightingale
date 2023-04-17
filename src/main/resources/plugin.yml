@@ -1,0 +1,6 @@
+name: Nightingale
+version: '${project.version}'
+main: management.untitled.Nightingale
+api-version: 1.8.8
+depend:
+  - Vault

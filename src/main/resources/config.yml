@@ -1,0 +1,25 @@
+# This is the basic configuration for the main plugin not the individual modules.
+pluginName: 'TestName'
+permissionsPrefix: 'Nightingale'
+noPermission: '&cNo permission.'
+
+# To disable/enable certain aspects of the core you can do it here
+Modules:
+  punishments: True
+  ranks: True
+  website: True
+
+# Certain aspects of the core can be configured here
+Settings:
+  enable_Ingame_Module_Commands: True
+  modules_Permission: 'modules.access'
+  # In-front of every permissions node you set is the permissions
+  # prefix listed above so to give someone this permission it would be 'nightingale.modules.access'.
+
+# We use MYSQL to synchronise with the website and store punishments/ranks & player information.
+Database:
+  host: 127.0.0.1
+  port: 3306
+  database: database_Nightingale
+  username: root
+  password: root
